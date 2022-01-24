@@ -3,25 +3,42 @@ fetch('https://api.thedogapi.com/v1/breeds')
     .then(dogImages => grabFiveDogs(dogImages))
 
     function grabFiveDogs(dogImages) {
-        const fiveDogImages = dogImages.slice(0,5)
-            console.log(fiveDogImages)
-            iterateDogs(fiveDogImages)
+        const tenDogImages = dogImages.slice(0,10)
+            console.log(tenDogImages)
+            iterateDogs(tenDogImages)
             
     }
 
-    function iterateDogs(fiveDogImages) {
-        fiveDogImages.forEach(singleBreed => {
-           renderDogImages(singleBreed.image.url)
+    function iterateDogs(tenDogImages) {
+        tenDogImages.forEach(singleBreed => {
+           // let url = singleBreed.image.url
+            // let name = singleBreed.name
+            renderDogList(singleBreed)
+           renderDogDetails(singleBreed)
+           //renderDogList(name)
         })
     }
 
 
 
-function renderDogImages(breedURL) {
-    let newImg = document.createElement('img');
-    let header = document.querySelector('header');
-    header.insertAdjacentElement('afterend', newImg)
-    newImg.src = breedURL
-    
+function renderDogDetails(singleBreed) {
+    //one details div
+    let details = document.querySelector("#dog-details")
+    //innerText img, name, to dog object to existing img and name tages
+    details.querySelector("h2").innerText = singleBreed.name
+
+    details.querySelector("img").src = singleBreed.image.url
     
 };
+
+function renderDogList(singleBreed) {
+    let ul = document.querySelector("#ul_container")
+    let li = document.createElement('li')
+    li.innerText = singleBreed.name
+    ul.appendChild(li)
+
+    
+    li.addEventListener("click", () => {
+        renderDogDetails(singleBreed)
+    })
+}
