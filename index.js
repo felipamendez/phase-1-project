@@ -41,3 +41,13 @@ function renderDogList(singleBreed) {
         renderDogDetails(singleBreed)
     })
 }
+
+
+let form = document.getElementById('dog_name');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let newDog = document.getElementById("new_dog_name")
+    newDog.innerHTML = e.target["new_name"].value
+})
+
