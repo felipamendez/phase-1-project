@@ -15,7 +15,6 @@ fetch('https://api.thedogapi.com/v1/breeds')
             // let name = singleBreed.name
             renderDogList(singleBreed)
            renderDogDetails(singleBreed)
-           //renderDogList(name)
         })
     }
 
