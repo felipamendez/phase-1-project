@@ -49,5 +49,19 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     let newDog = document.getElementById("new_dog_name")
     newDog.innerHTML = e.target["new_name"].value
+    form.reset()
 })
 
+let likeButton = document.getElementById('like-btn')
+
+likeButton.addEventListener('click', (e) => {
+    let heart = document.getElementById("heart")
+    if(heart.style.color !='red') {
+      heart.style.color = 'red'
+    //}  else if(heart.style.color === 'red') {
+    //    heart.style.color = 'black'
+      } else {
+          heart.style.color = 'black'
+      }
+
+})
