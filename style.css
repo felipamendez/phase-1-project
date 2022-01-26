@@ -2,7 +2,8 @@ body {
     display: block;
     color: rgb(70, 68, 68);
     text-align: left; 
-   
+   background-color: rgb(170, 202, 173);
+   font-family: Verdana, Geneva, sans-serif;
 }
 
  #dog_list_container {
@@ -15,12 +16,16 @@ body {
 
 #ul_container {
     list-style-type: none;
+    position: fixed;
+    left: 40px;
+    background-color: rgb(235, 230, 230);
+    padding: 5px;
 }
 
 #ul_container li {
     padding: 5px;
     font-weight: bold;
-    
+    border: 1px solid;
 }
 
 /* #container_div {
@@ -36,7 +41,7 @@ body {
 #dog-details {
     
     position: fixed;
-    left: 300px;
+    left: 340px;
     top: 0
     
 }
@@ -54,9 +59,29 @@ img {
     float: left;
     vertical-align: middle;
     position: fixed;  
-    left: 850px;
-    top: 70px;
+    left: 870px;
+    top: 95px;
     border: 1px solid;  
     padding: 10px;
+    background-color: rgb(235, 230, 230);
+    text-align: center; 
     
+}
+
+#emoji_container_div div {
+    width: 12%;
+    display: inline-block; 
+}
+
+footer ul {
+    padding: 0;
+}
+
+form h4 {
+    margin-bottom: 10px;
+}
+
+#dog_names {
+    background-color: rgb(235, 230, 230);
+    padding: 10px;
 }

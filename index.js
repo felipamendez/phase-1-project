@@ -84,5 +84,7 @@ select.addEventListener('change', (e) => {
         } }
     }
     loop()
+
+    document.querySelector("#emoji_container_div div").remove()
 })
     
