@@ -2,7 +2,7 @@ body {
     display: block;
     color: rgb(70, 68, 68);
     text-align: left; 
-   background-color: rgb(170, 202, 173);
+   /* background-color: rgb(170, 202, 173); */
    font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -84,4 +84,11 @@ form h4 {
 #dog_names {
     background-color: rgb(235, 230, 230);
     padding: 10px;
+}
+
+#ball_container_div {
+    position: fixed;
+    left: 730px;
+    top: 300px;
+    font-size: 50px;
 }
