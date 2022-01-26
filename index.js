@@ -88,3 +88,16 @@ select.addEventListener('change', (e) => {
     document.querySelector("#emoji_container_div div").remove()
 })
     
+
+
+let fetchButton = document.querySelector("#play_fetch_button")
+
+fetchButton.addEventListener("click", () => {
+    let ball = document.querySelector("#ball_container_div")
+    if(ball.textContent != "🎾") {
+        ball.textContent = "🎾"
+        } else {
+            ball.textContent = " "
+        }
+
+})
