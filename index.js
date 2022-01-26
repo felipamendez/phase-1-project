@@ -1,3 +1,5 @@
+//hey Larry! if you see this and you still have a project in the flex program, please feel free to use this code for your phase one project. Don't want you're contributions to go to waste!
+
 fetch('https://api.thedogapi.com/v1/breeds')
     .then(res => res.json())
     .then(dogImages => grabFiveDogs(dogImages))
@@ -25,9 +27,7 @@ function renderDogDetails(singleBreed) {
     let details = document.querySelector("#dog-details")
     //innerText img, name, to dog object to existing img and name tages
     details.querySelector("h2").innerText = singleBreed.name
-
     details.querySelector("img").src = singleBreed.image.url
-    
 };
 
 function renderDogList(singleBreed) {
@@ -58,10 +58,31 @@ likeButton.addEventListener('click', (e) => {
     let heart = document.getElementById("heart")
     if(heart.style.color !='red') {
       heart.style.color = 'red'
-    //}  else if(heart.style.color === 'red') {
-    //    heart.style.color = 'black'
       } else {
           heart.style.color = 'black'
       }
-
 })
+
+let select = document.querySelector("#rating_dropdown")
+
+const emojiDiv = document.querySelector("#emoji_container_div")
+emojiDiv.innerHTML = "&#128054"
+
+select.addEventListener('change', (e) => {
+    emojiDiv.innerHTML = "<div></div>"
+
+    let rating = parseInt(e.target.value, 10)
+    let i = 0
+    
+   function loop() {
+       while(i < rating) {
+        if (i !== rating) {
+            let innerDiv = document.createElement("div")
+            innerDiv.innerHTML = "&#128054"
+            emojiDiv.appendChild(innerDiv)
+            i++ 
+        } }
+    }
+    loop()
+})
+    
