@@ -2,13 +2,12 @@ body {
     display: block;
     color: rgb(70, 68, 68);
     text-align: left; 
-   /* background-color: rgb(170, 202, 173); */
+   background-color: rgb(170, 202, 173);
    font-family: Verdana, Geneva, sans-serif;
 }
 
  #dog_list_container {
     text-align: left;
-    
     position: absolute;
     left: 0;
   /* not working float left breaks clicks */
@@ -18,14 +17,16 @@ body {
     list-style-type: none;
     position: fixed;
     left: 40px;
-    background-color: rgb(235, 230, 230);
+    background-color: rgb(243, 241, 230);
     padding: 5px;
+    border-radius: 1em;
 }
 
 #ul_container li {
     padding: 5px;
     font-weight: bold;
     border: 1px solid;
+    border-radius: 2em;
 }
 
 /* #container_div {
@@ -39,11 +40,9 @@ body {
  
 
 #dog-details {
-    
     position: fixed;
     left: 340px;
     top: 0
-    
 }
 
 img {
@@ -63,8 +62,9 @@ img {
     top: 95px;
     border: 1px solid;  
     padding: 10px;
-    background-color: rgb(235, 230, 230);
+    background-color: rgb(243, 241, 230);
     text-align: center; 
+    border-radius: 2em;
     
 }
 
@@ -82,8 +82,10 @@ form h4 {
 }
 
 #dog_names {
-    background-color: rgb(235, 230, 230);
+    background-color: rgb(243, 241, 230);
     padding: 10px;
+    border-radius: .5em;
+    border: 1px solid;  
 }
 
 #ball_container_div {
@@ -91,4 +93,16 @@ form h4 {
     left: 730px;
     top: 300px;
     font-size: 50px;
+}
+
+#submit_button {
+    background-color: rgb(170, 202, 173);
+    border-radius: .7em;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#play_fetch_button {
+    background-color: rgb(170, 202, 173);
+    border-radius: .7em;
+    font-family: Verdana, Geneva, sans-serif;
 }
