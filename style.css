@@ -1,0 +1,43 @@
+body {
+    display: block;
+    color: rgb(70, 68, 68);
+    /* text-align: left; */
+   
+}
+
+#dog_list_container {
+    text-align: left;
+    float: left;
+    padding: 0px, 200px, 0px, 0px /* not working */
+}
+
+#ul_container {
+    list-style-type: none;
+    
+    
+}
+
+#ul_container li {
+    padding: 5px;
+    font-weight: bold;
+    
+}
+
+#container_div {
+    /* doesnt work */
+    width: 600px;
+    display: block;
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+ img {
+    width: 600px;
+    border-radius: 2em;
+} 
+
+#like-btn {
+    list-style-type: none;
+}
