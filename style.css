@@ -5,16 +5,16 @@ body {
    
 }
 
-#dog_list_container {
+ #dog_list_container {
     text-align: left;
-    float: left;
-    padding: 0px, 200px, 0px, 0px /* not working */
-}
+    /* float: left;  */
+    position: absolute;
+    left: 0;
+     padding: 0px, 200px, 0px, 0px  /* not working float left breaks clicks */
+    }
 
 #ul_container {
     list-style-type: none;
-    
-    
 }
 
 #ul_container li {
@@ -23,21 +23,42 @@ body {
     
 }
 
-#container_div {
+/* #container_div {
     /* doesnt work */
-    width: 600px;
-    display: block;
-    text-align: center; 
+    /* width: 600px;
+    display: block; */
+    /* text-align: center; 
     margin-left: auto;
+    margin-right: auto; */
+   /* float: right; */       
+ 
+
+#dog-details {
+    /* margin-left: auto;
     margin-right: auto;
-    
+    display: block; */
+    position: fixed;
+    left: 300px;
+    top: 0
     
 }
- img {
+
+img {
     width: 600px;
     border-radius: 2em;
 } 
 
 #like-btn {
     list-style-type: none;
+}
+
+#footer_container_div {
+    float: left;
+    vertical-align: middle;
+    position: fixed;  
+    right: 500px;
+    top: 70px;
+    border: 1px solid;  
+    padding: 10px;
+    
 }

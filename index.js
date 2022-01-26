@@ -2,9 +2,9 @@
 
 fetch('https://api.thedogapi.com/v1/breeds')
     .then(res => res.json())
-    .then(dogImages => grabFiveDogs(dogImages))
+    .then(dogImages => grabTenDogs(dogImages))
 
-    function grabFiveDogs(dogImages) {
+    function grabTenDogs(dogImages) {
         const tenDogImages = dogImages.slice(0,10)
             console.log(tenDogImages)
             iterateDogs(tenDogImages)
@@ -56,7 +56,7 @@ let likeButton = document.getElementById('like-btn')
 
 likeButton.addEventListener('click', (e) => {
     let heart = document.getElementById("heart")
-    if(heart.style.color !='red') {
+    if(heart.style.color != 'red') {
       heart.style.color = 'red'
       } else {
           heart.style.color = 'black'
