@@ -17,9 +17,10 @@ body {
     list-style-type: none;
     position: fixed;
     left: 40px;
-    background-color: rgb(243, 241, 230);
+    background-color: rgb(70, 68, 68);
     padding: 5px;
     border-radius: 1em;
+    top: 8px;
 }
 
 #ul_container li {
@@ -27,6 +28,13 @@ body {
     font-weight: bold;
     border: 1px solid;
     border-radius: 2em;
+    background-color: rgb(243, 241, 230);
+}
+
+#ul_container #first_li{
+    background-color: rgb(70, 68, 68);
+    color: rgb(243, 241, 230);
+    border: none;
 }
 
 /* #container_div {
@@ -98,11 +106,13 @@ form h4 {
 #submit_button {
     background-color: rgb(170, 202, 173);
     border-radius: .7em;
+    padding: 5px;
     font-family: Verdana, Geneva, sans-serif;
 }
 
 #play_fetch_button {
     background-color: rgb(170, 202, 173);
     border-radius: .7em;
+    padding: 5px;
     font-family: Verdana, Geneva, sans-serif;
 }

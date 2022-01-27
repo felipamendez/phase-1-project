@@ -4,31 +4,28 @@ fetch('https://api.thedogapi.com/v1/breeds')
     .then(res => res.json())
     .then(dogImages => grabTenDogs(dogImages))
 
-    function grabTenDogs(dogImages) {
-        const tenDogImages = dogImages.slice(0,10)
-            console.log(tenDogImages)
-            iterateDogs(tenDogImages)
+
+function grabTenDogs(dogImages) {
+    const tenDogImages = dogImages.slice(0,10)
+        iterateDogs(tenDogImages)
             
-    }
+}
 
-    function iterateDogs(tenDogImages) {
-        tenDogImages.forEach(singleBreed => {
-           // let url = singleBreed.image.url
-            // let name = singleBreed.name
-            renderDogList(singleBreed)
-           renderDogDetails(singleBreed)
-        })
-    }
 
+function iterateDogs(tenDogImages) {
+    tenDogImages.forEach(singleBreed => {
+        renderDogList(singleBreed)
+        renderDogDetails(singleBreed)
+    })
+}
 
 
 function renderDogDetails(singleBreed) {
-    //one details div
     let details = document.querySelector("#dog-details")
-    //innerText img, name, to dog object to existing img and name tages
     details.querySelector("h2").innerText = singleBreed.name
     details.querySelector("img").src = singleBreed.image.url
-};
+}
+
 
 function renderDogList(singleBreed) {
     let ul = document.querySelector("#ul_container")
@@ -37,67 +34,67 @@ function renderDogList(singleBreed) {
     ul.appendChild(li)
 
     
-    li.addEventListener("click", () => {
-        renderDogDetails(singleBreed)
-    })
+    li.addEventListener("click", () => renderDogDetails(singleBreed))
 }
 
 
 let form = document.getElementById('dog_name');
 
 form.addEventListener('submit', (e) => {
+
     e.preventDefault()
     let newDog = document.getElementById("new_dog_name")
     newDog.innerHTML = e.target["new_name"].value
     form.reset()
+
 })
+
 
 let likeButton = document.getElementById('like-btn')
 
-likeButton.addEventListener('click', (e) => {
+likeButton.addEventListener('click', () => {
+
     let heart = document.getElementById("heart")
     if(heart.style.color != 'red') {
       heart.style.color = 'red'
       } else {
           heart.style.color = 'black'
       }
+
 })
 
-let select = document.querySelector("#rating_dropdown")
 
+let dropdown = document.querySelector("#rating_dropdown")
 const emojiDiv = document.querySelector("#emoji_container_div")
 emojiDiv.innerHTML = "&#128054"
 
-select.addEventListener('change', (e) => {
+dropdown.addEventListener('change', (e) => {
+    
     emojiDiv.innerHTML = "<div></div>"
-
     let rating = parseInt(e.target.value, 10)
     let i = 0
     
-   function loop() {
-       while(i < rating) {
+    while(i < rating) {
         if (i !== rating) {
             let innerDiv = document.createElement("div")
             innerDiv.innerHTML = "&#128054"
             emojiDiv.appendChild(innerDiv)
             i++ 
-        } }
+        } 
     }
-    loop()
 
     document.querySelector("#emoji_container_div div").remove()
 })
     
 
-
 let fetchButton = document.querySelector("#play_fetch_button")
 
 fetchButton.addEventListener("click", () => {
+    
     let ball = document.querySelector("#ball_container_div")
     if(ball.textContent != "🎾") {
         ball.textContent = "🎾"
         } else {
             ball.textContent = " "
         }
-
 })
