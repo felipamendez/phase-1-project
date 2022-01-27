@@ -2,8 +2,26 @@ body {
     display: block;
     color: rgb(70, 68, 68);
     text-align: left; 
-   background-color: rgb(170, 202, 173);
-   font-family: Verdana, Geneva, sans-serif;
+    background-color: rgb(170, 202, 173);
+    font-family: Verdana, Geneva, sans-serif;
+    margin:0;
+    padding:0;
+
+}
+
+#neo_pups_container {
+    background-color: rgb(70, 68, 68);
+    width: 100%;
+    margin: 0px;
+    height: 100px;
+}
+
+#neo_pups_header {
+    margin: 0px;
+    color: rgb(243, 241, 230);
+    position: fixed;
+    top: 20px;
+    left: 40px;
 }
 
  #dog_list_container {
@@ -20,7 +38,7 @@ body {
     background-color: rgb(70, 68, 68);
     padding: 5px;
     border-radius: 1em;
-    top: 8px;
+    top: 100px;
 }
 
 #ul_container li {
@@ -50,7 +68,7 @@ body {
 #dog-details {
     position: fixed;
     left: 340px;
-    top: 0
+    top: 95px;
 }
 
 img {
@@ -67,7 +85,7 @@ img {
     vertical-align: middle;
     position: fixed;  
     left: 870px;
-    top: 95px;
+    top: 190px;
     border: 1px solid;  
     padding: 10px;
     background-color: rgb(243, 241, 230);
@@ -99,7 +117,7 @@ form h4 {
 #ball_container_div {
     position: fixed;
     left: 730px;
-    top: 300px;
+    top: 390px;
     font-size: 50px;
 }
 
