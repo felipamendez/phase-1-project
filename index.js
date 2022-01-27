@@ -2,18 +2,18 @@
 
 fetch('https://api.thedogapi.com/v1/breeds')
     .then(res => res.json())
-    .then(dogImages => grabTenDogs(dogImages))
+    .then(dogImages => grabFourteenDogs(dogImages))
 
 
-function grabTenDogs(dogImages) {
-    const tenDogImages = dogImages.slice(0,10)
-        iterateDogs(tenDogImages)
+function grabFourteenDogs(dogImages) {
+    const fourteenDogImages = dogImages.slice(0,14)
+        iterateDogs(fourteenDogImages)
             
 }
 
 
-function iterateDogs(tenDogImages) {
-    tenDogImages.forEach(singleBreed => {
+function iterateDogs(fouteenDogImages) {
+    fouteenDogImages.forEach(singleBreed => {
         renderDogList(singleBreed)
         renderDogDetails(singleBreed)
     })
@@ -90,7 +90,7 @@ dropdown.addEventListener('change', (e) => {
 let fetchButton = document.querySelector("#play_fetch_button")
 
 fetchButton.addEventListener("click", () => {
-    
+
     let ball = document.querySelector("#ball_container_div")
     if(ball.textContent != "🎾") {
         ball.textContent = "🎾"

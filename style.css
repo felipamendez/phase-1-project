@@ -20,25 +20,25 @@ body {
     margin: 0px;
     color: rgb(243, 241, 230);
     position: fixed;
-    top: 20px;
+    top: 30px;
     left: 40px;
 }
 
  #dog_list_container {
-    text-align: left;
     position: absolute;
     left: 0;
-  /* not working float left breaks clicks */
+  /* float left breaks clicks */
     }
 
 #ul_container {
     list-style-type: none;
     position: fixed;
-    left: 40px;
+    left: 50px;
     background-color: rgb(70, 68, 68);
     padding: 5px;
     border-radius: 1em;
     top: 100px;
+    left: 10px;
 }
 
 #ul_container li {
@@ -53,21 +53,11 @@ body {
     background-color: rgb(70, 68, 68);
     color: rgb(243, 241, 230);
     border: none;
-}
-
-/* #container_div {
-    /* doesnt work */
-    /* width: 600px;
-    display: block; */
-    /* text-align: center; 
-    margin-left: auto;
-    margin-right: auto; */
-   /* float: right; */       
- 
+} 
 
 #dog-details {
     position: fixed;
-    left: 340px;
+    left: 360px;
     top: 95px;
 }
 
@@ -84,7 +74,7 @@ img {
     float: left;
     vertical-align: middle;
     position: fixed;  
-    left: 870px;
+    left: 885px;
     top: 190px;
     border: 1px solid;  
     padding: 10px;
@@ -116,7 +106,7 @@ form h4 {
 
 #ball_container_div {
     position: fixed;
-    left: 730px;
+    left: 740px;
     top: 390px;
     font-size: 50px;
 }
