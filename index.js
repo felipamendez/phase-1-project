@@ -92,9 +92,10 @@ let fetchButton = document.querySelector("#play_fetch_button")
 fetchButton.addEventListener("click", () => {
 
     let ball = document.querySelector("#ball_container_div")
-    if(ball.textContent != "🎾") {
-        ball.textContent = "🎾"
+    if(ball.innerHTML != `<div class="animate__animated animate__slideInLeft">🎾</div>`) {
+        ball.innerHTML = `<div class="animate__animated animate__slideInLeft">🎾</div>`
         } else {
-            ball.textContent = " "
+            ball.innerHTML = " "
         }
+
 })
