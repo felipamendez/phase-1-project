@@ -27,7 +27,6 @@ body {
  #dog_list_container {
     position: absolute;
     left: 0;
-  /* float left breaks clicks */
     }
 
 #ul_container {
@@ -117,7 +116,6 @@ form {
     top: 390px;
     font-size: 50px;
     text-align: right;
-    /* width: 1530px; */
     
 }
 
